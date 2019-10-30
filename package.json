@@ -11,7 +11,9 @@
     "react-redux": "^7.1.1",
     "react-scripts": "3.2.0",
     "redux": "^4.0.4",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^4.4.0",
+    "styled-css-grid": "^1.2.1"
   },
   "scripts": {
     "start": "concurrently \"npm run api\" \"npm run dev\"",
