@@ -17,7 +17,7 @@ export default (state = initialState, { type, payload }) => {
       return {
         ...state,
         loaded: true,
-        tickets: [...payload.sort((a,b) => (a.stops > b.stops) ? 1 : ((b.stops > a.stops) ? -1 : 0))]
+        tickets: [...payload]
       };
     case LOAD_ALL_TICKETS + FAILURE:
       return {
