@@ -1,8 +1,9 @@
-import { compose } from "recompose";
-// export const ticketsGetter = state => ({
-//   tickets: state.tickets.tickets.sort((a, b) => (a.stops > b.stops) ? 1 : ((b.stops > a.stops) ? -1 : 0))
-// })
-const filters = [3, 1];
+import { compose } from "redux";
+
+export const filtersGetter = state => state.filters;
+
+const filters = [0, 1, 2, 3];
+
 export const ticketsGetter = state => {
   return {
     tickets: compose(
@@ -11,7 +12,6 @@ export const ticketsGetter = state => {
     )(state.tickets.tickets)
   };
 };
+
 const withSort = arr => arr.sort((a, b) => (a.stops > b.stops) ? 1 : ((b.stops > a.stops) ? -1 : 0));
-const withFilters = filters => arr => {
-  return arr.filter(item => filters.includes(item.stops));
-};
+const withFilters = filters => arr => arr.filter(item => filters.includes(item.stops));

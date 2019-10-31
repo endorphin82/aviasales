@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Ticket from "./Ticket";
 import { loadAllTickets } from "../../AC";
-import { ticketsGetter } from "../../selectors";
+import { filtersGetter, ticketsGetter } from "../../selectors";
 
 const Tickets = () => {
   const dispatch = useDispatch();
