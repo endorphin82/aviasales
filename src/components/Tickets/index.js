@@ -9,7 +9,7 @@ const Tickets = () => {
     dispatch(loadAllTickets());
   }, [dispatch]);
   const { tickets } = useSelector(
-    state => ({ tickets: state.tickets.tickets })
+    state => ({ tickets: state.tickets.tickets.sort((a, b) => (a.stops > b.stops) ? 1 : ((b.stops > a.stops) ? -1 : 0)) })
   );
   return (
     <>
