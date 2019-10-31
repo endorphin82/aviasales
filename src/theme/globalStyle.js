@@ -4,9 +4,11 @@ import styled from "styled-components";
 export const themeDefaultColors = {
   backgroundPage: "#F2F2F2",
   backgroundPaper: "#FFFFFF",
+  paperBorderColor: "#e4e7e8",
   backgroundButton: "#FF6D00",
   colorTextButton: "#FFFFFF",
   backgroundButtonHover: "#FF8124",
+  buttonShadowColor: "#D64D08",
   primaryTextColor: "#4A4A4A",
   secondaryTextColor: "#8B9497",
   currencyBgColor: "#FFFFFF",
