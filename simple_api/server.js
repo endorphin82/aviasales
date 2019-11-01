@@ -37,5 +37,4 @@ app.get("/api/tickets", (req, res) => {
   res.send(data.tickets);
 });
 
-
 app.listen(app.get("port"), () => console.log(`Server is listening: http://localhost:${app.get("port")}`));
