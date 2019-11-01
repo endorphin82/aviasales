@@ -15,7 +15,7 @@ const Transplantation = () => {
       </ul>
       <button onClick={() => dispatch(updateFilter(0))}>Add/Delete 0 Transplantation</button>
       <button onClick={() => dispatch(updateFilter(1))}>Add/Delete 1 Transplantation</button>
-      <button onClick={() => dispatch(updateFilter(2))}>Add/Delete 0 Transplantation</button>
+      <button onClick={() => dispatch(updateFilter(2))}>Add/Delete 2 Transplantation</button>
       <button onClick={() => dispatch(updateFilter(3))}>Add/Delete 3 Transplantation</button>
     </>
   );
