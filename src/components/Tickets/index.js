@@ -2,14 +2,14 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Ticket from "./Ticket";
 import { loadAllTickets } from "../../AC";
-import { filtersGetter, ticketsGetter } from "../../selectors";
+import { ticketsGetterWithSortFiltered } from "../../selectors";
 
 const Tickets = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadAllTickets());
   }, [dispatch]);
-  const { tickets } = useSelector( ticketsGetter );
+  const { tickets } = useSelector( ticketsGetterWithSortFiltered );
 
   return (
     <>
