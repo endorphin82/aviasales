@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { pluralize } from "numeralize-ru";
 import { IconAirPlane } from "../../../theme/globalStyle";
 
 const TicketDesktop = styled.li`
