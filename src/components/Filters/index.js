@@ -1,5 +1,5 @@
 import React from "react";
-import Currency from "./Crrency";
+import Currency from "./Currency";
 import Transplantation from "./Transplantation";
 
 const Filters = () => {
