@@ -1,27 +1,27 @@
-import { LOAD_ALL_TICKETS, START, FAILURE, SUCCESS } from "../constants";
+import { FAILURE, GET_CURRENCY, START, SUCCESS } from "../constants";
 
 const initialState = {
+  currency: {},
   loaded: false,
-  tickets: [],
-  errors: false
+  errors: {}
 };
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
-    case LOAD_ALL_TICKETS + START:
+    case GET_CURRENCY + START:
       return {
         ...state,
         loaded: false,
         errors: false
       };
-    case LOAD_ALL_TICKETS + SUCCESS:
+    case GET_CURRENCY + SUCCESS:
       return {
         ...state,
         loaded: true,
-        tickets: [...payload],
+        currency: {...payload},
         errors: false
       };
-    case LOAD_ALL_TICKETS + FAILURE:
+    case GET_CURRENCY + FAILURE:
       return {
         ...state,
         loaded: false,

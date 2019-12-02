@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Ticket from "./Ticket";
-import { loadAllTickets } from "../../AC";
+import { getCurrency, loadAllTickets } from "../../AC";
 import { ticketsGetterWithSortFiltered } from "../../selectors";
 
 const Tickets = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadAllTickets());
+    dispatch(getCurrency())
   }, [dispatch]);
   const { tickets } = useSelector( ticketsGetterWithSortFiltered );
 

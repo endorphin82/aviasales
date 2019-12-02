@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 import App from "./App";
-import store from "./store";
+import { store } from "./store";
 import { themeDefaultColors } from "./theme/globalStyle";
 
 ReactDOM.render(
