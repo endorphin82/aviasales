@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import styled, {ThemeProvider} from "styled-components";
 import { themeDefaultColors } from "../../../theme/globalStyle";
 
-const Rg = styled.div`
+const RadioButtonsGroup = styled.div`
   -webkit-box-sizing:border-box;
   box-sizing:border-box;
   padding:0;
@@ -62,7 +62,7 @@ const RadioButton = styled.input`
 `;
 
 function Currency() {
-  const [select, setSelect] = useState("usd");
+  const [select, setSelect] = useState("rub");
   const handleSelectChange = event => {
     const value = event.target.value;
     setSelect(value);
@@ -70,7 +70,7 @@ function Currency() {
 
   return (
     <ThemeProvider theme={themeDefaultColors}>
-      <Rg>
+      <RadioButtonsGroup>
         <RbLabelWrap
           checked={select === "rub"}
         >
@@ -113,7 +113,7 @@ function Currency() {
           </RbSpan>
           eur
         </RbLabelWrap>
-      </Rg>
+      </RadioButtonsGroup>
     </ThemeProvider>
   );
 }
